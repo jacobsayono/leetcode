@@ -62,6 +62,8 @@
 // @lc code=start
 #include <vector>
 
+/*
+// O(n^2)
 class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, int target) {    
@@ -74,6 +76,28 @@ public:
                     return result;
                 }
             }
+        }
+        return result;
+    }
+};
+*/
+
+#include <unordered_map>
+
+// O(n)
+class Solution {
+public:
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {    
+        std::vector<int> result;
+        std::unordered_map<int, int> map;  // vector value, vector index
+        for (int i = 0; i < nums.size(); ++i) {
+            int match = target - nums[i];
+            if (map.find(match) != map.end()) {  // .find() goes to last index if cannot find, so if it doesn't, there is a match for this iteration
+                result.push_back(i);  // push_back index of the current iteration
+                result.push_back(map[match]);  // index of the match
+                return result;
+            }
+            map[nums[i]] = i;  // no match, store value (and its index) into map for next iteration
         }
         return result;
     }
