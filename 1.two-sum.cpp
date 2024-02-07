@@ -60,10 +60,10 @@
  */
 
 // @lc code=start
-#include <vector>
-
 /*
 // O(n^2)
+#include <vector>
+
 class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, int target) {    
@@ -82,9 +82,10 @@ public:
 };
 */
 
+// O(n)
+#include <vector>
 #include <unordered_map>
 
-// O(n)
 class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, int target) {    
