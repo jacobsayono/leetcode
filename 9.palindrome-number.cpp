@@ -55,15 +55,17 @@
  */
 
 // @lc code=start
+#include <unordered_map>
+
 class Solution {
 public:
     bool isPalindrome(int x) {
         if (x < 0) {
             return false;
         }
-        size_t copy = x;
-        size_t oneDigit = 0;
-        size_t moveDigitLeft = 0;
+        std::size_t copy = x;
+        std::size_t oneDigit = 0;
+        std::size_t moveDigitLeft = 0;
         while (copy != 0) {
             oneDigit = copy % 10;  // get right most digit
             moveDigitLeft += oneDigit;  // iterative summing feature

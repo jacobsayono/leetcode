@@ -2,15 +2,13 @@
 #include <iostream>
 
 int main() {
+    Solution solution;
+
     int num1 = 121;
-    Solution solution1;
-    std::cout << solution1.isPalindrome(num1) << std::endl;
-
     int num2 = -121;
-    Solution solution2;
-    std::cout << solution1.isPalindrome(num2) << std::endl;
-
     int num3 = 10;
-    Solution solution3;
-    std::cout << solution3.isPalindrome(num3) << std::endl;
+
+    std::cout << solution.isPalindrome(num1) << std::endl;
+    std::cout << solution.isPalindrome(num2) << std::endl;
+    std::cout << solution.isPalindrome(num3) << std::endl;
 }
