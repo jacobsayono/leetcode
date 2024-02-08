@@ -68,11 +68,10 @@ public:
         std::size_t moveDigitLeft = 0;
         while (copy != 0) {
             oneDigit = copy % 10;  // get right most digit
-            moveDigitLeft += oneDigit;  // iterative summing feature
+            moveDigitLeft = moveDigitLeft*10 + oneDigit;  // move over all digits by one place to the left and add iterative summing
             copy /= 10;  // break off right most digit
-            moveDigitLeft *= 10;  // move over all digits by one place to the left
         }
-        return moveDigitLeft/10 == x;  // compare original x with palindrome; remove the added 0
+        return moveDigitLeft == x;  // compare original x with palindrome; remove the added 0
     }
 };
 
