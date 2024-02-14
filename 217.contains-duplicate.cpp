@@ -38,7 +38,7 @@
  */
 
 // @lc code=start
-#include <set>
+#include <unordered_set>
 #include <vector>
 
 class Solution {
@@ -46,7 +46,7 @@ public:
     bool containsDuplicate(std::vector<int>& nums) {
         // iterate through array and store seen elements into a set
         // if cannot insert into set, we have seen it, so we found a duplicate and return true
-        std::set<int> seen;
+        std::unordered_set<int> seen;
         for (int i = 0; i < nums.size(); ++i) {
             if (!seen.insert(nums[i]).second) {
                 return true;
