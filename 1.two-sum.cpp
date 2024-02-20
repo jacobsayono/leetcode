@@ -60,31 +60,31 @@
  */
 
 // @lc code=start
-/*
-#include <vector>
+// // O(n^2)
+// #include <vector>
 
-class Solution {  // O(n^2)
-public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target) {    
-        std::vector<int> result;   
-        for (int left = 0; left < nums.size(); ++left) {
-            for (int right = left + 1; right < nums.size(); ++right) {
-                if (nums[left] + nums[right] == target) {
-                    result.push_back(left);
-                    result.push_back(right);
-                    return result;
-                }
-            }
-        }
-        return result;
-    }
-};
-*/
+// class Solution {
+// public:
+//     std::vector<int> twoSum(std::vector<int>& nums, int target) {    
+//         std::vector<int> result;   
+//         for (int left = 0; left < nums.size(); ++left) {
+//             for (int right = left + 1; right < nums.size(); ++right) {
+//                 if (nums[left] + nums[right] == target) {
+//                     result.push_back(left);
+//                     result.push_back(right);
+//                     return result;
+//                 }
+//             }
+//         }
+//         return result;
+//     }
+// };
 
+// O(n)
 #include <vector>
 #include <unordered_map>
 
-class Solution {  // O(n)
+class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, int target) {    
         std::vector<int> result;
